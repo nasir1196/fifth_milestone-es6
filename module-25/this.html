@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This KeyWord</title>
+</head>
+
+<body>
+    <h1>show how to work this. value</h1>
+    <p onclick="this.innerText='You clicked me'">You don't clicked me</p>
+
+    <script>
+        const myObject = {
+            name: 'kuddus Ali',
+            getFullName: function () {
+                console.log(this);
+                return 'Mr ' + this.name;
+            }
+        }
+
+        const anotherObject = {
+            name: 'Biddut Ali'
+        }
+        anotherObject.getFullName = myObject.getFullName;
+        //     const newAnotherObj = anotherObject.getFullName();
+        anotherObject.getFullName();
+        myObject.getFullName();
+
+
+    //     const myObj = myObject.getFullName();
+    //     console.log(myObj);
+    //     console.log(newAnotherObj);
+    // </script>
+</body>
+
+</html>
